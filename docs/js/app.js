@@ -24,6 +24,7 @@ let app = {
   soundAvance: new Audio("js/0128.wav"),
   soundWin: new Audio("js/0019.wav"),
   soundgame: new Audio("js/Logo_nouvelle_cible.mp3"),
+  soundMur: new Audio("js/0433.wav"),
 
   rotatePlayer: 0,
 
@@ -126,32 +127,46 @@ let app = {
 
   moveForward: () => {
     if (app.gameOver === false) {
-      app.soundAvance.play();
       app.nbrEssaie++;
       switch (app.rotatePlayer) {
         case 0:
           if (app.players.positionX < 350 && app.players.positionX > -1) {
             app.players.positionX += 70;
+            app.soundAvance.play();
+          } else {
+            app.soundMur.play();
           }
           break;
         case 90:
           if (app.players.positionY < 210 && app.players.positionY > -1) {
             app.players.positionY += 70;
+            app.soundAvance.play();
+          } else {
+            app.soundMur.play();
           }
           break;
         case 180:
           if (app.players.positionX < 351 && app.players.positionX > 0) {
             app.players.positionX -= 70;
+            app.soundAvance.play();
+          } else {
+            app.soundMur.play();
           }
           break;
         case 270:
           if (app.players.positionY >= 70 && app.players.positionY <= 210) {
             app.players.positionY -= 70;
+            app.soundAvance.play();
+          } else {
+            app.soundMur.play();
           }
           break;
         case 360:
           if (app.players.positionX < 350 && app.players.positionX > -1) {
             app.players.positionX += 70;
+            app.soundAvance.play();
+          } else {
+            app.soundMur.play();
           }
           break;
         default:
