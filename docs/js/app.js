@@ -251,13 +251,13 @@ let app = {
   },
 
   init: () => {
-    app.soundgame.play();
     app.clickModal();
     app.listenKeyboardEvents();
     app.clickForward();
     app.clickLeft();
     app.clickRight();
     app.drawBoard();
+    app.soundgame.play();
   },
 };
 
