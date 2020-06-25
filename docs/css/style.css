@@ -79,7 +79,7 @@ main {
 .img_win {
   width: 60%;
   height: 300px;
-  background-image: url("../dollar-826x459.jpg");
+  background-image: url("../img/dollar-826x459.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -109,32 +109,61 @@ main {
 .player {
   width: 70px;
   height: 100%;
-  background-image: url("../Capture.PNG");
+  background-image: url("../img/Capture.PNG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .targetCell {
-  background-image: url("../1200px-Unofficial_JavaScript_logo_2.svg.png");
+  background-image: url("../img/1200px-Unofficial_JavaScript_logo_2.svg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .box_arrow {
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
 }
 
 .fleche {
   font-size: 7em;
-  margin: 40px 15px;
+  margin: 40px 0;
   animation: colorArrow 5s infinite;
 }
 
 .fleche:hover {
   cursor: pointer;
+}
+
+.flech_gauche {
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/33ea9197268014e2ec53d9ea0d1fe12d9742a7d9-t.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flech_avant {
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/2af1208ab073b2c36000513457adcbc7d229a4a5-t\ \(copie\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+
+.flech_droite {
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/2af1208ab073b2c36000513457adcbc7d229a4a5-t.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* --------------------------------------------------------------------- */

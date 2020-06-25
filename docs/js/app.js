@@ -21,6 +21,10 @@ let app = {
     go: document.querySelector(".flech_avant"),
   },
 
+  soundAvance: new Audio("js/0128.wav"),
+  soundWin: new Audio("js/0019.wav"),
+  soundgame: new Audio("js/Logo_nouvelle_cible.mp3"),
+
   rotatePlayer: 0,
 
   board: document.querySelector("#board"),
@@ -92,6 +96,7 @@ let app = {
 
   turnLeft: () => {
     if (app.gameOver === false) {
+      app.soundAvance.play();
       app.players.direction = "droite";
       if (app.rotatePlayer === 0) {
         app.rotatePlayer = 360;
@@ -106,6 +111,7 @@ let app = {
 
   turnRight: () => {
     if (app.gameOver === false) {
+      app.soundAvance.play();
       app.players.direction = "gauche";
       if (app.rotatePlayer === 360) {
         app.rotatePlayer = 0;
@@ -120,6 +126,7 @@ let app = {
 
   moveForward: () => {
     if (app.gameOver === false) {
+      app.soundAvance.play();
       app.nbrEssaie++;
       switch (app.rotatePlayer) {
         case 0:
@@ -210,8 +217,11 @@ let app = {
       app.players.positionX === app.targetCell.positionX &&
       app.players.positionY === app.targetCell.positionY
     ) {
+      app.soundWin.pause();
+      app.soundgame.pause();
       app.gameOver = true;
       app.modalWin.classList.add("active_modal");
+      app.soundWin.play();
       for (const list of app.textNbrEssaie) {
         list.textContent = app.nbrEssaie;
       }
@@ -226,6 +236,7 @@ let app = {
   },
 
   init: () => {
+    app.soundgame.play();
     app.clickModal();
     app.listenKeyboardEvents();
     app.clickForward();
