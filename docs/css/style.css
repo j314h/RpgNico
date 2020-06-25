@@ -116,7 +116,10 @@ main {
 }
 
 .targetCell {
-  animation: colorBackground 5s infinite;
+  background-image: url("../1200px-Unofficial_JavaScript_logo_2.svg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .box_arrow {
