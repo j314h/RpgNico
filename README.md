@@ -1,4 +1,5 @@
-# RpgNico
-Rpg pour remercie notre prof js
+# **No more update
 
-> Petit jeu mettant en scène notre super prof js qui est super et qu'on adore
+-  Exercice Rpg  
+
+    RPG exercise, for the full stack JS training that I followed at Oclock
